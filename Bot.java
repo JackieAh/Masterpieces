@@ -32,7 +32,7 @@ float total = number * weight;
 System.out.println("Total Shipment Weight: " + total + " kg");
         System.out.println("Is this information correct? True or false");
         boolean validate = reader.nextBoolean();
-        System.out.println("Thanks for using our service!");
+        System.out.println("Thanks for using our service! Validation = " + validate);
     }
 
     static void informationAboutString() {
