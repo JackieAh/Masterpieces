@@ -1,0 +1,8 @@
+   0 mkdir -p /home/user/start/ && touch 1.txt /home/user/start/
+   1 echo Start > 1.txt
+   2 date >> 1.txt
+   3 mkdir -p /opt/task/ && touch start.txt /opt/task/
+   4 cp 1.txt start.txt
+   5 ls -al / | tail -4 >> start.txt
+   6 cat start.txt
+   7 history > linux_hw2.txt
