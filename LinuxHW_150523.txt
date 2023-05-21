@@ -1,0 +1,55 @@
+#SCRIPT BODY 
+
+#!/bin/bash
+
+echo "Your name is: " $USER
+echo "Your working directory is: " $PWD
+echo  "Number of users: "
+ps -ef | grep ssh
+echo "done"
+
+
+
+#FILE RIGHTS AND VISIBILITY (MANUALLY EXTRACTED FROM SERVER)
+
+[ec2-user@ip-172-31-33-20 ~]$ cd /opt/040423_evening/jenyaa/
+[ec2-user@ip-172-31-33-20 jenyaa]$ ls
+script.sh  test
+[ec2-user@ip-172-31-33-20 jenyaa]$ ls -a
+.  ..  .testscript.sh  script.sh  test
+[ec2-user@ip-172-31-33-20 jenyaa]$ ls -l
+total 4
+-rwxr--r-- 1 ec2-user ec2-user 257 May 15 19:36 script.sh
+drwxrwxr-x 2 ec2-user ec2-user  39 May 21 10:27 test
+[ec2-user@ip-172-31-33-20 jenyaa]$ ls -al
+total 8
+drwxrwxr-x  3 ec2-user ec2-user  57 May 21 11:55 .
+drwxrwxr-x 18 ec2-user ec2-user 269 May 21 11:05 ..
+-rw----rw-  1 ec2-user ec2-user 140 May 21 11:45 .testscript.sh
+-rwxr--r--  1 ec2-user ec2-user 257 May 15 19:36 script.sh
+drwxrwxr-x  2 ec2-user ec2-user  39 May 21 10:27 test
+
+
+#RUNNING SCRIPT
+[ec2-user@ip-172-31-33-20 jenyaa]$ bash .testscript.sh
+Your name is:  ec2-user
+Your working directory is:  /opt/040423_evening/jenyaa
+Number of users: 
+root      2367     1  0 Mar22 ?        00:00:06 /usr/sbin/sshd -D
+root      5021  2367  0 11:23 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user  5029  5021  0 11:23 ?        00:00:00 sshd: ec2-user@pts/4
+root      8198  2367  0 10:19 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user  8206  8198  0 10:19 ?        00:00:00 sshd: ec2-user@pts/0
+root      9387  2367  0 11:33 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user  9396  9387  0 11:33 ?        00:00:00 sshd: ec2-user@pts/5
+root     14612  2367  0 11:44 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user 14615 14612  0 11:44 ?        00:00:00 sshd: ec2-user@pts/6
+root     22139  2367  0 12:01 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user 22141 22139  0 12:01 ?        00:00:00 sshd: ec2-user@pts/3
+ec2-user 24233 24231  0 12:05 pts/3    00:00:00 grep ssh
+root     28242  2367  0 11:04 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user 28244 28242  0 11:04 ?        00:00:00 sshd: ec2-user@pts/2
+root     32269  2367  0 11:13 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user 32272 32269  0 11:13 ?        00:00:00 sshd: ec2-user@pts/1
+done
+[ec2-user@ip-172-31-33-20 jenyaa]$ 
