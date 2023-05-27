@@ -1,0 +1,48 @@
+[ec2-user@ip-172-31-33-20 ~]$ cd /opt/040423_evening/jenyaa
+[ec2-user@ip-172-31-33-20 jenyaa]$ ls -al
+total 20
+drwxrwxr-x  3 ec2-user ec2-user 292 May 27 05:13 .
+drwxrwxr-x 19 ec2-user ec2-user 295 May 22 16:56 ..
+-rw----rw-  1 ec2-user ec2-user 140 May 21 11:45 .testscript.sh
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 10_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 1_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 2_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 3_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 4_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 5_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 6_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 7_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 8_051310
+-rw-rw-r--  1 ec2-user ec2-user   0 May 27 05:13 9_051310
+-rw-rw-r--  1 ec2-user ec2-user  88 May 22 19:08 crontab
+-rwxr--r--  1 ec2-user ec2-user   0 May 22 19:08 output.txt
+-rwxr--r--  1 ec2-user ec2-user 257 May 15 19:36 script.sh
+-rwxr--r--  1 ec2-user ec2-user  51 May 22 19:20 script777.sh
+-rwxr--r--  1 ec2-user ec2-user 114 May 27 05:12 taskJENYAA.sh
+drwxrwxr-x  2 ec2-user ec2-user  39 May 21 10:27 test
+
+
+
+
+#nano taskJENYAA.sh
+
+#!/bin/bash
+
+tdate=$(date +"%H%M%S")
+for run in {1..10}
+do
+number=$run
+file="${number}_${tdate}"
+touch $file
+done
+
+
+
+#Crontab command
+
+*/15 * * * * /opt/040423_evening/jenyaa/taskJENYAA.sh
+
+
+[ec2-user@ip-172-31-33-20 jenyaa]$ crontab -l
+*/15 * * * * /opt/040423_evening/jenyaa/taskJENYAA.sh
+
