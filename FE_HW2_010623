@@ -1,0 +1,115 @@
+/* CSS
+
+h1{
+text-align: center; 
+color: rgb(43, 11, 64);
+}
+p{
+    font-size: smaller;
+}
+
+.hobby{
+border: 3px solid rgb(124, 14, 227);
+background-color: rgb(248, 131, 248);
+padding: 20px;
+margin: 20px, 20px, 20px, 20 px;
+}
+
+.hobby h2, .job h2, .friends h2 {
+    text-align: center;
+}
+
+.hobby img, .job img, .friends img {
+    width: 300px;
+    
+}
+
+.hobby p, .job p, .friends p {
+    font-size: 20px;
+}
+
+.job {
+    border: 3px dashed rgb(14, 40, 239);
+    background-color: rgb(97, 168, 235);
+    padding: 20px;
+margin: 20px, 20px, 20px, 20 px;
+}
+
+.friends {
+    border: 3px solid rgb(27, 91, 57);
+    background-color: rgb(180, 249, 193);
+    padding: 20px;
+    margin: 20px, 20px, 20px, 20 px;
+}
+.sm {
+    border: 1px solid rgb(160, 152, 152);
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    margin: 10px, 10px, 10px, 10 px;
+}
+
+.sm img {
+    width: 30px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+
+/* HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My blog</title>
+    <link rel="stylesheet" href="blogstyles.css">
+</head>
+<body>
+ <h1>MY BLOG</h1>   
+ <div class="hobby">
+    <h2>My Hobbies</h2>
+ <div>  
+<img src="https://guides.williams.edu/files/2016/06/travel-04.jpg" alt="Travel is life">
+</div> 
+<a href="https://thesabbaticalguide.com/travel-is-the-only-thing-you-buy-that-makes-you-richer/" target="_blank">Travel is the only thing you can buy that will make you richer</a>
+<p>I love traveling more than anything else :D </p>
+ 
+</div>
+<br>
+<div class="job">   
+<h2>My Job</h2>
+<div><img src="https://images.hindustantimes.com/img/2022/05/25/550x309/pjimage_1653450128430_1653450139002.jpg" alt="Pseudo important jobs">
+</div> 
+<a href="https://techcrunch.com/sponsor/philips/6-reasons-why/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAACaCVqilu7YSSl62v4b27GX1gv_YwwDaf7EMTUY1rWzzut1qpTj6pbNCmmIYGsRM6hNhr4TRUua-0OOdIj4xzegoO_wNovw0d3rB7cXTCzwByj4uO7FZCmU7QmmePGMd9MD0IvzJkEuly-_4v0jYBziqK0ydvtp21-ovB6sBbMiI" target="_blank">6 reasons why working for big corporations is good</a>
+<p>Corporate job can be good and useful and blah but it drains you.</p>
+</div>
+<br>
+<div class="friends">
+<h2>My Friends</h2>
+<div>
+    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*SyUZxzViS2m1m4PZqPrbzw.jpeg" alt="Friends rule!">
+    </div> 
+    <a href="https://medium.com/be-bold/each-friend-represents-a-world-in-us-a-world-not-born-until-they-arrive-cbdbf21deba" target="_blank">Each friend represents a world in us</a>
+    <p>My friends are the best :D </p>
+</div>
+</div>
+<br>
+<div class="sm">
+    <p>Connect with me on:</p>
+    <div></div>
+<div><a href="www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram"></a> 
+<a href="www.facebook.com" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEU6VZ////82Up4zUJ1UbKx4ibswTpyMmsQ5V6EtTJupss8nSJnN0+WVosgqSpo4U56eqcyDksDj5vBwgbb3+PxFXqNabqt9jb3S2OhidbC9xdy3v9l0hLjZ3etLY6bq7fTEyt4dQpdJYqekrs2uttK97JEgAAADFUlEQVR4nO3c2XLiMBBAUUZmM3IsFsNgSIAk/P83TsLzjCNbI3c3de9rqlw+BV7VZDIhIiIiIiIiIiIiIiIiIlJeCM4VxbzsrJDey8G50s/3h91ss3jp7LdJYii8262rbfPr545eem/753y9qWJwjypzwqJuT7E6i0JX7459fOaEvn3r5zMmLPy5r8+W0L9Gn15MCkO9GuAzJHSh9xFoS1hcrsOAVoTzdsghaEhYTAcDbQjdfjjQhDAshx6DRoShrhKAFoR+nQI0ICzaJKABYZlyEFoQ1p9pQPVCd0m4UJgQ+lsiULvQXVKB2oW+1ysZg8KwTAYqF5ZpF3sDQr99cqFLvJ3RL0y+2usXDnw1Y0YYUh58TQiL3X8Aql57Kvschs3xdF/9pftC8fphj3vSalZ6X5tbA/axJ5rtzhdBem+HVEeeaKq55s+po1DHAW/vJj+/yfdifdxX1OYX9LuwjxIejH5Fv3LTGOBJ8eXup+KEH056P4cXJby+S+9mQlHCUy29mwlFCddz6d1MKEq4sXsmjRTOEGoOIUL9IUSoP4QI9YcQof4QItQfQoT6Q4hQR27+78qYucRX37GFR7Jrb65ddBQz1Hbv2sCjpSixvEcgEitlhcN+cNenRnZxagThm+wK6ghC4TXiEYSr8tmFwstvIwhb2XX+EYR72St+fmEj6htDuBW+a8svPArPauQXnp9e+CI8jZJfKP38mF8ofDnML2wuwsOn2YVX6ena7MKt9PRpduHt6YUr6eHM7MKF9HBmduGr9OvU7MKp9BR4bmEjDcwulJ9zzy2U/+1hbqH0s1N+4afsq8QRhPKT/LmFB+kb7+xC6Tua7ELhdacRhOLPTtmFCv7ZQOY14LP4xWISlh2FqFkM17UF8VPpF7Hjb3HTJl2nSwXAzp5jnqYrhAj1hxCh/hAi1B9ChPpDiFB/CBHqDyFC/SFEqD+ECPWHEKH+ECLUH0KE+kOIUH8IEeoPIUL9IUSoP4QI9YcQof4QItQfQoT6Q4hQfwgR6g8hQv0hRKg/hAj1hxCh/hAi1B9ChD36A+1ASVvVoq0WAAAAAElFTkSuQmCC" alt="Facebook"></a>
+<a href="www.github.com"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>  
+</div>
+</div>
+</body>
+</html>
