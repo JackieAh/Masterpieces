@@ -1,0 +1,119 @@
+// HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+    <link rel="stylesheet" href="hwstyles.css">
+    <bgsound src="https://www.youtube.com/watch?v=ETxmCCsMoD0" loop="10"> 
+</head>
+<body>
+   <div>
+    <h1>Currency Exchange Converter</h1>
+   </div>
+<h3>List of Currencies</h3>
+<br>
+   <ul type="square">
+    <li>€ (EUR) - Euro (Eurozone countries)</li>
+    <li>$ (USD) - Dollar (United States of America)</li>
+    <li>£ (GBP) - Pound (United Kingdom)</li>
+    <li>¥ (JPY) - Yen (Japan)</li>
+    <li>ლ (GEL) - Lari (Georgia)</li>
+</ul>
+<br>
+<table class="table1">
+    <tr>
+<th colspan="2">Flags</td>
+<th>Currency</th>
+<th>Rate</th>
+    </tr>
+    <tr>
+        <th> <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-square-500.png" alt="USD"></th>
+        <th><img src="https://cdn.countryflags.com/thumbs/europe/flag-square-500.png" alt="EUR"></th>
+        <th>$ (USD) / € (EUR)</th>
+        <th>0.93 €</th>
+        
+    </tr>
+    <tr>
+        <th> <img src="https://cdn.countryflags.com/thumbs/united-kingdom/flag-square-500.png" alt="GBP"></th>
+        <th><img src="https://cdn.countryflags.com/thumbs/europe/flag-square-500.png" alt="EUR"></th>
+        <th>£ (GBP) / € (EUR)</th>
+        <th>1.17 €</th>
+        
+    </tr>
+    <tr>
+        <th> <img src="https://cdn.countryflags.com/thumbs/japan/flag-square-500.png" alt="JPY"></th>
+        <th><img src="https://cdn.countryflags.com/thumbs/europe/flag-square-500.png" alt="EUR"></th>
+        <th>¥ (JPY) / € (EUR)</th>
+        <th>0.0073 €</th>
+         </tr>
+ <tr>
+        <th> <img src="https://cdn.countryflags.com/thumbs/georgia/flag-square-500.png" alt="GEL"></th>
+        <th><img src="https://cdn.countryflags.com/thumbs/europe/flag-square-500.png" alt="EUR"></th>
+        <th>ლ (GEL) / € (EUR)</th>
+        <th>0.32 €</th>
+         </tr>
+    
+
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+// CSS
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+body {
+    background-image: url(https://cdn.gobankingrates.com/wp-content/uploads/2017/11/12-iStock-623525964.jpg);
+    padding: 15px;
+    margin: 15px;
+  }
+h1 {
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    }
+
+ul {
+    padding: 5px;
+    margin: 5px;  
+}
+
+li{
+    fill            : none;
+    stroke          : rgb(248, 245, 245);
+    stroke-width    : .5px;
+    stroke-linejoin : round;
+}
+
+.table1 {
+    
+    text-align: center;
+    background-color: aliceblue;
+    width: 500px;
+    border: 2px solid black;
+
+}
+ 
+.table1 img{
+    height: 35px;
+    align-self: center;
+    padding-top: 10px;
+}
+
+.table1 th {
+    padding-bottom: 10px;
+    border: 1px solid black;
+}
